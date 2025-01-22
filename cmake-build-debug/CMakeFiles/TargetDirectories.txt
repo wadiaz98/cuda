@@ -1,3 +1,4 @@
 C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/cuda_01.dir
+C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/cl_01.dir
 C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/rebuild_cache.dir

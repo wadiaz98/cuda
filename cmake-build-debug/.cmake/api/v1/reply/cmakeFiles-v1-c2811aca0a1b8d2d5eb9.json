@@ -134,6 +134,31 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakePushCheckState.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/FindPackageMessage.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

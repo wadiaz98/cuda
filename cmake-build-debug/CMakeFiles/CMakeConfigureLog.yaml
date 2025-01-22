@@ -675,3 +675,37 @@ events:
       Microsoft (R) Incremental Linker Version 14.41.34120.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CheckSymbolExists.cmake:70 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:59 (CHECK_SYMBOL_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/FindOpenCL.cmake:100 (_FIND_OPENCL_VERSION)"
+      - "CMakeLists.txt:17 (find_package)"
+    checks:
+      - "Looking for CL_VERSION_3_0"
+    directories:
+      source: "C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kxq51g"
+      binary: "C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kxq51g"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OPENCL_VERSION_3_0"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kxq51g'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" -v cmTC_35af0
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\include" /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_35af0.dir\\CheckSymbolExists.cxx.obj /FdCMakeFiles\\cmTC_35af0.dir\\ /FS -c C:\\Users\\fing.labcom\\Downloads\\Paralela\\CLION\\cuda\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-kxq51g\\CheckSymbolExists.cxx
+        cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2024.2.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_35af0.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_35af0.dir\\CheckSymbolExists.cxx.obj  /out:cmTC_35af0.exe /implib:cmTC_35af0.lib /pdb:cmTC_35af0.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+...

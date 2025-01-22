@@ -1202,6 +1202,62 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenCL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenCL"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[C:/Program Files (x86)/Intel/oneAPI/compiler/latest/lib/OpenCL.lib][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include][v3.0()]"
+		},
+		{
+			"name" : "OPENCL_VERSION_3_0",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have symbol CL_VERSION_3_0"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "OpenCL_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/include"
+		},
+		{
+			"name" : "OpenCL_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files (x86)/Intel/oneAPI/compiler/latest/lib/OpenCL.lib"
+		},
+		{
 			"name" : "cuda_BINARY_DIR",
 			"properties" : 
 			[

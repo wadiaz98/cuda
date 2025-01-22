@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "cuda",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "cl_01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cl_01-Debug-2bc911c722697c7ff60e.json",
+					"name" : "cl_01",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "cuda_01::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-cuda_01-Debug-23526504c4b98824ddbb.json",
+					"jsonFile" : "target-cuda_01-Debug-daf5ac57e402052c94f6.json",
 					"name" : "cuda_01",
 					"projectIndex" : 0
 				}

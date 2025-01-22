@@ -66,6 +66,14 @@ build CMakeFiles\cuda_01.dir\kernel.cu.obj: CUDA_COMPILER__cuda_01_unscanned_Deb
   TARGET_COMPILE_PDB = CMakeFiles\cuda_01.dir\
   TARGET_PDB = cuda_01.pdb
 
+build CMakeFiles\cuda_01.dir\main_cl.cpp.obj: CXX_COMPILER__cuda_01_unscanned_Debug C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\main_cl.cpp || cmake_object_order_depends_target_cuda_01
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
+  INCLUDES = -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"
+  OBJECT_DIR = CMakeFiles\cuda_01.dir
+  OBJECT_FILE_DIR = CMakeFiles\cuda_01.dir
+  TARGET_COMPILE_PDB = CMakeFiles\cuda_01.dir\
+  TARGET_PDB = cuda_01.pdb
+
 
 # =============================================================================
 # Device Link build statements for EXECUTABLE target cuda_01
@@ -74,7 +82,7 @@ build CMakeFiles\cuda_01.dir\kernel.cu.obj: CUDA_COMPILER__cuda_01_unscanned_Deb
 #############################################
 # Link the executable CMakeFiles\cuda_01.dir\cmake_device_link.obj
 
-build CMakeFiles\cuda_01.dir\cmake_device_link.obj: CXX_EXECUTABLE_DEVICE_LINKER__cuda_01_Debug CMakeFiles\cuda_01.dir\main.cpp.obj CMakeFiles\cuda_01.dir\kernel.cu.obj
+build CMakeFiles\cuda_01.dir\cmake_device_link.obj: CXX_EXECUTABLE_DEVICE_LINKER__cuda_01_Debug CMakeFiles\cuda_01.dir\main.cpp.obj CMakeFiles\cuda_01.dir\kernel.cu.obj CMakeFiles\cuda_01.dir\main_cl.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -D_WINDOWS -Xcompiler=" /EHsc" -Xcompiler=" -Ob0 -Od /RTC1" "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -Xcompiler=-MDd -Xcompiler=-Zi
   LINK_LIBRARIES = cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   LINK_PATH = -LIBPATH:C:\PROGRA~1\NVIDIA~2\CUDA\v12.6\lib\x64
@@ -91,7 +99,7 @@ build CMakeFiles\cuda_01.dir\cmake_device_link.obj: CXX_EXECUTABLE_DEVICE_LINKER
 #############################################
 # Link the executable cuda_01.exe
 
-build cuda_01.exe: CXX_EXECUTABLE_LINKER__cuda_01_Debug CMakeFiles\cuda_01.dir\main.cpp.obj CMakeFiles\cuda_01.dir\kernel.cu.obj CMakeFiles\cuda_01.dir\cmake_device_link.obj
+build cuda_01.exe: CXX_EXECUTABLE_LINKER__cuda_01_Debug CMakeFiles\cuda_01.dir\main.cpp.obj CMakeFiles\cuda_01.dir\kernel.cu.obj CMakeFiles\cuda_01.dir\main_cl.cpp.obj CMakeFiles\cuda_01.dir\cmake_device_link.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = cudadevrt.lib  cudart_static.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -103,6 +111,43 @@ build cuda_01.exe: CXX_EXECUTABLE_LINKER__cuda_01_Debug CMakeFiles\cuda_01.dir\m
   TARGET_FILE = cuda_01.exe
   TARGET_IMPLIB = cuda_01.lib
   TARGET_PDB = cuda_01.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target cl_01
+
+
+#############################################
+# Order-only phony target for cl_01
+
+build cmake_object_order_depends_target_cl_01: phony || .
+
+build CMakeFiles\cl_01.dir\main_cl.cpp.obj: CXX_COMPILER__cl_01_unscanned_Debug C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\main_cl.cpp || cmake_object_order_depends_target_cl_01
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
+  INCLUDES = -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"
+  OBJECT_DIR = CMakeFiles\cl_01.dir
+  OBJECT_FILE_DIR = CMakeFiles\cl_01.dir
+  TARGET_COMPILE_PDB = CMakeFiles\cl_01.dir\
+  TARGET_PDB = cl_01.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cl_01
+
+
+#############################################
+# Link the executable cl_01.exe
+
+build cl_01.exe: CXX_EXECUTABLE_LINKER__cl_01_Debug CMakeFiles\cl_01.dir\main_cl.cpp.obj | C$:\Program$ Files$ (x86)\Intel\oneAPI\compiler\latest\lib\OpenCL.lib
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = "C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib\OpenCL.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\cl_01.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\cl_01.dir\
+  TARGET_FILE = cl_01.exe
+  TARGET_IMPLIB = cl_01.lib
+  TARGET_PDB = cl_01.pdb
 
 
 #############################################
@@ -130,6 +175,8 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build cl_01: phony cl_01.exe
+
 build cuda_01: phony cuda_01.exe
 
 # =============================================================================
@@ -140,7 +187,7 @@ build cuda_01: phony cuda_01.exe
 #############################################
 # Folder: C:/Users/fing.labcom/Downloads/Paralela/CLION/cuda/cmake-build-debug
 
-build all: phony cuda_01.exe
+build all: phony cuda_01.exe cl_01.exe
 
 # =============================================================================
 # Built-in targets
@@ -149,14 +196,14 @@ build all: phony cuda_01.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCUDAInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.6\CMakeCUDACompiler.cmake CMakeFiles\3.29.6\CMakeCXXCompiler.cmake CMakeFiles\3.29.6\CMakeRCCompiler.cmake CMakeFiles\3.29.6\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCUDAInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakePushCheckState.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CheckSymbolExists.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindOpenCL.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.6\CMakeCUDACompiler.cmake CMakeFiles\3.29.6\CMakeCXXCompiler.cmake CMakeFiles\3.29.6\CMakeRCCompiler.cmake CMakeFiles\3.29.6\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCUDAInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.6\CMakeCUDACompiler.cmake CMakeFiles\3.29.6\CMakeCXXCompiler.cmake CMakeFiles\3.29.6\CMakeRCCompiler.cmake CMakeFiles\3.29.6\CMakeSystem.cmake: phony
+build C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCUDAInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakePushCheckState.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\CheckSymbolExists.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Compiler\NVIDIA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindOpenCL.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows-NVIDIA-CUDA.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\JetBrains\CLion$ 2024.2.1\bin\cmake\win\x64\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Users\fing.labcom\Downloads\Paralela\CLION\cuda\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.6\CMakeCUDACompiler.cmake CMakeFiles\3.29.6\CMakeCXXCompiler.cmake CMakeFiles\3.29.6\CMakeRCCompiler.cmake CMakeFiles\3.29.6\CMakeSystem.cmake: phony
 
 
 #############################################
